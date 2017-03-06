@@ -7,13 +7,13 @@ namespace Vidly.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddIsSubscribedToCustomer : IMigrationMetadata
+    public sealed partial class AddAnnotationsToCustomerName : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddIsSubscribedToCustomer));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddAnnotationsToCustomerName));
         
         string IMigrationMetadata.Id
         {
-            get { return "201702271628434_AddIsSubscribedToCustomer"; }
+            get { return "201703061435220_AddAnnotationsToCustomerName"; }
         }
         
         string IMigrationMetadata.Source

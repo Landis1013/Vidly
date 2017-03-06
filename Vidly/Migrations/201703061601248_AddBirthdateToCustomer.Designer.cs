@@ -7,13 +7,13 @@ namespace Vidly.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class ApplyAnnotationsToCustomerName : IMigrationMetadata
+    public sealed partial class AddBirthdateToCustomer : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ApplyAnnotationsToCustomerName));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddBirthdateToCustomer));
         
         string IMigrationMetadata.Id
         {
-            get { return "201702271643124_ApplyAnnotationsToCustomerName"; }
+            get { return "201703061601248_AddBirthdateToCustomer"; }
         }
         
         string IMigrationMetadata.Source

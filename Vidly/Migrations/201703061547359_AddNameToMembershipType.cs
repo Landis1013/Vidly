@@ -7,7 +7,7 @@ namespace Vidly.Migrations
     {
         public override void Up()
         {
-            AddColumn("dbo.MembershipTypes", "Name", c => c.String(maxLength: 255));
+            AddColumn("dbo.MembershipTypes", "Name", c => c.String());
         }
         
         public override void Down()
