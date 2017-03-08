@@ -16,7 +16,7 @@ namespace Vidly
 
             // ATTRIBUTE ROUTING w/ REGEX CONSTRAINTS
             //  (Section 2, Lecture 13)
-            // OTHER CONSTRAINTS ->     min, max, minlength, maslength, int, fload, guid
+            // OTHER CONSTRAINTS ->     min, max, minlength, maxlength, int, float, guid
             routes.MapMvcAttributeRoutes();
 
             // ATTRIBUTE ROUTING w/ REGEX CONSTRAINTS

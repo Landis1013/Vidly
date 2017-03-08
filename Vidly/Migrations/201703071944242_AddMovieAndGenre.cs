@@ -11,7 +11,7 @@ namespace Vidly.Migrations
                 "dbo.Genres",
                 c => new
                     {
-                        Id = c.Byte(nullable: false),
+                        Id = c.Int(nullable: false, identity: true),
                         Name = c.String(nullable: false, maxLength: 255),
                     })
                 .PrimaryKey(t => t.Id);
@@ -26,18 +26,18 @@ namespace Vidly.Migrations
                         DateAdded = c.DateTime(nullable: false),
                         ReleaseDate = c.DateTime(nullable: false),
                         NumberInStock = c.Byte(nullable: false),
-                        NumberAvailable = c.Byte(nullable: false),
+                        Genre_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Genres", t => t.GenreId, cascadeDelete: true)
-                .Index(t => t.GenreId);
+                .ForeignKey("dbo.Genres", t => t.Genre_Id)
+                .Index(t => t.Genre_Id);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Movies", "GenreId", "dbo.Genres");
-            DropIndex("dbo.Movies", new[] { "GenreId" });
+            DropForeignKey("dbo.Movies", "Genre_Id", "dbo.Genres");
+            DropIndex("dbo.Movies", new[] { "Genre_Id" });
             DropTable("dbo.Movies");
             DropTable("dbo.Genres");
         }
